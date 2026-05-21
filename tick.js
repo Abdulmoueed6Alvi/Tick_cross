@@ -76,7 +76,8 @@ let reset = () => {
     arr = new Array(9).fill('empty');
     turn = 'X';
     turncount = 0;
-    document.querySelector('.current-player').textContent = 'X';
+    const cp = document.querySelector('.current-player');
+    if (cp) cp.textContent = 'X';
     document.getElementById('result').textContent = '';
     ab.addEventListener('click', print);
     for (let i = 0; i < 9; i++) {
